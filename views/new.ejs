@@ -1,0 +1,21 @@
+<%include ./partials/header%>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"> -->
+<div class="ui main text container segment">
+	<div class="ui huge header">New Blog</div>
+	<form action="/blogs" method="POST" class="ui form">
+		<div class="fields">
+			<label>Title</label>
+				<input type="text" name="blog[title]" placeholder="title">
+		</div>
+		<div class="fields">
+			<label>Image</label>
+				<input type="text" name="blog[image]" placeholder="image">
+		</div>
+		<div class="fields">
+			<label>Blog</label>
+				<textarea name="blog[body]"></textarea>
+		</div>
+		<input class="ui voilet basic button" type="submit">
+	</form>
+</div>
+<%include ./partials/footer%>

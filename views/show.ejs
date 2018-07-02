@@ -1,0 +1,21 @@
+<%include ./partials/header%>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"> -->
+<div class="ui main text container segment">
+	<div class="ui huge header"><%=blog.title%></div>
+		<div class="ui top attached segment">
+			<div class="item">
+				<img class="ui centered rounded image" width="25%" src="<%= blog.image%>">
+			</div>
+			<div class="content">
+				<span><%= blog.created.toDateString() %></span>	
+			</div>
+			<div class="description">
+				<p><%= blog.body %></p>
+			</div>
+			<a href="/blogs/<%=blog._id%>/edit" class="ui orange basic button">Edit</a>
+			<form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+				<button class="ui red basic button">DELETE</button>
+			</form>
+		<!-- </div> -->
+</div>
+<%include ./partials/footer%>
